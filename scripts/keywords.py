@@ -11,13 +11,11 @@ if inicio != -1 and fin != -1:
 else:
     resumen = ""
 
-# Pasar a minúsculas y separar en palabras
 palabras = resumen.lower().split()
 
 # Palabras comunes a ignorar
 palabras_comunes = ["el", "la", "los", "las", "y", "de", "del", "un", "una", "con", "para", "en", "por", "a", "al", "se"]
 
-# Contar frecuencia de palabras
 frecuencia = {}
 for palabra in palabras:
     palabra = palabra.strip(".,;:()[]\"'")  # quitar signos de puntuación
