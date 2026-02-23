@@ -5,7 +5,6 @@ with open(nombre_archivo, "r", encoding="utf-8") as archivo:
 
 palabras = contenido.split()
 
-# Lista para guardar enlaces
 enlaces = []
 
 for palabra in palabras:
