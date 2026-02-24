@@ -9,7 +9,6 @@ enlaces = []
 
 for palabra in palabras:
     if palabra.startswith("http://") or palabra.startswith("https://"):
-        # Limpiar posibles caracteres finales
         enlace = palabra.strip(".,;:()[]\"'") # quitar signos de puntuación
         enlaces.append(enlace)
 
