@@ -1,17 +1,15 @@
-nombre_archivo = input("Escribe el nombre del archivo XML: ")
+xml_file = input("Escribe el nombre del archivo XML: ")
+with open(xml_file, "r", encoding="utf-8") as f:
+    text = f.read()
 
-with open(nombre_archivo, "r", encoding="utf-8") as archivo:
-    contenido = archivo.read()
-
-palabras = contenido.split()
-
-enlaces = []
-
-for palabra in palabras:
-    if palabra.startswith("http://") or palabra.startswith("https://"):
-        enlace = palabra.strip(".,;:()[]\"'") # quitar signos de puntuación
-        enlaces.append(enlace)
-
-print("Enlaces encontrados en el artículo:")
-for enlace in enlaces:
-    print(enlace)
+i = 0
+while True:
+    i = text.find('target="', i)
+    if i == -1:
+        break
+    i += len('target="')
+    j = text.find('"', i)
+    link = text[i:j]
+    if link.startswith("http") and link != "https://github.com/kermitt2/grobid":
+        print(link)
+    i = j
