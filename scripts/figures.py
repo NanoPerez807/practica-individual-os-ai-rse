@@ -9,8 +9,7 @@ nombres = []
 num_figuras_lista = []
 
 for nombre_archivo in xmls:
-    ruta_completa = os.path.join(carpeta_xml, nombre_archivo)
-    with open(ruta_completa, "r", encoding="utf-8") as archivo:
+    with open(f"{papers}/{nombre_archivo}", "r", encoding="utf-8") as archivo:
         contenido = archivo.read()
 
     num_figuras = contenido.count("<figure")
@@ -25,5 +24,3 @@ plt.ylabel("Número de figuras")
 plt.xlabel("Papers")
 plt.title("Número de figuras por artículo")
 plt.tight_layout()
-plt.savefig("../resultados/figuras.png")
-print("Gráfico guardado como 'figuras.png'")
