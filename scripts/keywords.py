@@ -3,11 +3,11 @@ import re
 
 papers = "../papers"
 
-xml_files = [f for f in os.listdir(papers) if f.endswith(".xml")]
+xmls = [f for f in os.listdir(papers) if f.endswith(".xml")]
 
 palabras_comunes = ["and","the","of","in","to","with","for","on","by","an","is","are","as","at","from","that","this","it","be","or","was","were","which"]
 
-for nombre_archivo in xml_files:
+for nombre_archivo in xmls:
     with open(f"{papers}/{nombre_archivo}", "r", encoding="utf-8") as archivo:
         contenido = archivo.read()
 
