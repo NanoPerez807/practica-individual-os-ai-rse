@@ -34,6 +34,6 @@ for nombre_archivo in xml_files:
     nube = WordCloud(width=800, height=400, background_color="white")
     nube.generate_from_frequencies(frecuencia)
 
-    nube.to_file(f"../resultados/nube_{nombre_archivo.replace(".xml", ".png")}")
+    nube.to_file(f"../resultados/nube_{nombre_archivo.replace('.xml', '.png')}")
 
-    print(f"Nube generada: nube_{nombre_archivo.replace(".xml", ".png")}")
+    print(f"Nube generada: nube_{nombre_archivo.replace('.xml', '.png')}")
