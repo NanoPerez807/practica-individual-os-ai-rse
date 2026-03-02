@@ -1,14 +1,14 @@
 import os
 import matplotlib.pyplot as plt
 
-carpeta_xml = "../papers"
+papers = "../papers"
 
-xml_files = [f for f in os.listdir(carpeta_xml) if f.endswith(".xml")]
+xmls = [f for f in os.listdir(papers) if f.endswith(".xml")]
 
 nombres = []
 num_figuras_lista = []
 
-for nombre_archivo in xml_files:
+for nombre_archivo in xmls:
     ruta_completa = os.path.join(carpeta_xml, nombre_archivo)
     with open(ruta_completa, "r", encoding="utf-8") as archivo:
         contenido = archivo.read()
