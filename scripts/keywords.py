@@ -1,3 +1,4 @@
+from wordcloud import WordCloud
 import os
 import re
 
@@ -37,3 +38,4 @@ for nombre_archivo in xmls:
     nube.to_file(f"../resultados/nube_{nombre_archivo.replace('.xml', '.png')}")
 
     print(f"Nube generada: nube_{nombre_archivo.replace('.xml', '.png')}")
+    
