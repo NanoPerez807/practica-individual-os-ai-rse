@@ -1,7 +1,7 @@
 import os
 import matplotlib.pyplot as plt
 
-papers = "practica-individual-os-ai-rse/papers"
+papers = "../papers"
 
 xmls = [f for f in os.listdir(papers) if f.endswith(".xml")]
 
@@ -24,5 +24,5 @@ plt.ylabel("Número de figuras")
 plt.xlabel("Papers")
 plt.title("Número de figuras por artículo")
 plt.tight_layout()
-plt.savefig("practica-individual-os-ai-rse/resultados/figuras.png")
+plt.savefig("../resultados/figuras.png")
 print("Gráfico guardado como 'figuras.png'")
