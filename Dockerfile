@@ -8,7 +8,8 @@ COPY scripts/ ./scripts/
 COPY papers/ ./papers/
 RUN mkdir -p resultados
 
-# Instalar dependencias
+# Instalamos dependencias
 RUN pip install matplotlib wordcloud
 
-CMD ["python", "scripts/figures.py"]
+# Lanzar un shell para luego poder elegir el script
+CMD ["/bin/bash"]
