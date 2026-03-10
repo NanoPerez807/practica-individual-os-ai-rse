@@ -122,9 +122,13 @@ chmod +x run.sh
 y después ejecutarlo con:
 
 ```
+./run.sh poetry
+```
+o bien 
+
+```
 ./run.sh docker
 ```
-
 # Validación de resultados
 
 Se realizaron comprobaciones manuales para verificar que los resultados generados por los scripts son correctos.
