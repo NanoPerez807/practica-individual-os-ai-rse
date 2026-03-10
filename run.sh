@@ -31,19 +31,19 @@ if [ "$modo" == "poetry" ]; then
 elif [ "$modo" == "docker" ]; then
     echo "Ejecutando con Docker..."
 
-    # Build de la imagen (si no está construida, se puede forzar con --build)
+    # Build de la imagen
     docker build -t practica-os-ai-rse .
 
     # Ejecutar scripts dentro del contenedor
     docker run --rm -it \
         -v $(pwd)/resultados:/practica-individual-os-ai-rse/resultados \
         practica-os-ai-rse \
-        bash -c "cd scripts && python scripts/figures.py && python scripts/keywords.py && python scripts/links.py"
+        bash -c "cd scripts && python figures.py && python keywords.py && python links.py"
 
     echo "Scripts ejecutados con correctamente."
 
 else
     echo "Modo no reconocido. Usa:"
-    echo "  ./run_all.sh poetry"
-    echo "  ./run_all.sh docker"
+    echo "  ./run.sh poetry"
+    echo "  ./run.sh docker"
 fi
