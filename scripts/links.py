@@ -1,10 +1,10 @@
 import os
 import re
 
-papers = "../papers"
+papers = "practica-individual-os-ai-rse/papers"
 xmls = [f for f in os.listdir(papers) if f.endswith(".xml")]
 
-with open("../resultados/enlaces.txt", "w", encoding="utf-8") as out:
+with open("practica-individual-os-ai-rse/resultados/enlaces.txt", "w", encoding="utf-8") as out:
 
     for nombre_archivo in xmls:
 
