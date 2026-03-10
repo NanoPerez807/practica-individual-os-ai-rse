@@ -8,7 +8,7 @@ Este proyecto realiza un análisis sobre 10 artículos científicos de acceso ab
 
 ```
 .
-├── papers/           # Archivos XML 
+├── papers/           # Aquí se encuentran los archivos XML, para comprobar con otros archivos XML, simplemente se han de insertar en este directorio 
 ├── scripts/          # Scripts de análisis
 │   ├── figures.py
 │   ├── keywords.py
@@ -17,6 +17,7 @@ Este proyecto realiza un análisis sobre 10 artículos científicos de acceso ab
 ├── pyproject.toml    # Configuración del entorno con Poetry
 ├── poetry.lock
 ├── LICENSE
+├── run.sh            # Script para ejecutar todo de manera automática
 └── README.md
 ```
 
@@ -26,7 +27,7 @@ Este proyecto realiza un análisis sobre 10 artículos científicos de acceso ab
 
 ## 1. Contador de figuras
 
-Script: `scripts/figures.py`
+Script: `figures.py`
 
 Este script recorre los archivos XML y cuenta el número de apariciones de la etiqueta `<figure>` en cada artículo.
 
@@ -42,7 +43,7 @@ resultados/figuras.png
 
 ## 2. Nube de palabras clave
 
-Script: `scripts/keywords.py`
+Script: `keywords.py`
 
 Para cada archivo XML se extrae el contenido de la etiqueta `<abstract>` y se cuentan las frecuencias de cada palabra para generar una nube de palabras que muestra las palabras más relevantes del abstract.
 
@@ -55,7 +56,7 @@ resultados/nube_<nombre_del_articulo>.png
 
 ## 3. Listado de enlaces
 
-Script: `scripts/links.py`
+Script: `links.py`
 
 Este script busca enlaces dentro de los archivos XML y los lista.
 
@@ -67,56 +68,62 @@ resultados/enlaces.txt
 
 ---
 
-# Instalación del entorno
+# Instalación y ejecución
 
-El proyecto utiliza Poetry para la gestión de dependencias y del entorno virtual.
+El proyecto puede ejecutarse de dos maneras: usando Poetry (entorno local) o usando Docker (contenedor). Se explican ambas a continuación.
+## Opción 1: Usando Poetry (entorno local)
 
-## Instalar Poetry
+Esta opción permite ejecutar los scripts directamente en tu máquina usando un entorno virtual gestionado con Poetry.
+
+### 1. Instalar Poetry
+
+Sigue las instrucciones oficiales en:
 
 https://python-poetry.org/docs/#installation
 
-## Instalar dependencias
+### 2. Instalar dependencias
 
-Desde la raíz del proyecto:
+Desde la raíz del proyecto, ejecuta:
 
 ```
 poetry install
 ```
 
-## Activar el entorno
+## Opción 2: Usando Docker
+
+Esta opción permite ejecutar los scripts dentro de un contenedor Docker, sin necesidad de instalar dependencias en tu máquina local.
+
+### 1. Instalar Docker
+
+Sigue las instrucciones oficiales según tu sistema operativo:
+
+https://docs.docker.com/get-docker/
+
+### 2. Construir la imagen
+
+Desde la raíz del proyecto, ejecuta:
 
 ```
-poetry env activate
-(devolverá el comando con la ruta a ejecutar, se debe por tanto ejecutar literalmente lo que devuelva el comando)
+docker build -t practica-os-ai-rse .
 ```
 
----
+## Ejecutar scripts
 
-# Ejecución de los scripts
+Se ha preparado un script para automatizar la ejecución de los scripts.
 
-Una vez activado el entorno, los scripts pueden ejecutarse desde la raíz del proyecto.
+Para ejecutarlo:
 
-Generar gráfico de figuras:
-
-```
-python scripts/figures.py
-```
-
-Generar nubes de palabras:
+previamente hay que darle permiso de ejecución:
 
 ```
-python scripts/keywords.py
+chmod +x run.sh
 ```
 
-Extraer enlaces:
+y después ejecutarlo con:
 
 ```
-python scripts/links.py
+./run.sh docker
 ```
-
-Los resultados se guardarán automáticamente en la carpeta `resultados/`.
-
----
 
 # Validación de resultados
 
