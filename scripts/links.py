@@ -2,11 +2,11 @@ import os
 import re
 
 papers = "../papers"
-xml_files = [f for f in os.listdir(papers) if f.endswith(".xml")]
+xmls = [f for f in os.listdir(papers) if f.endswith(".xml")]
 
 with open("../resultados/enlaces.txt", "w", encoding="utf-8") as out:
 
-    for nombre_archivo in xml_files:
+    for nombre_archivo in xmls:
 
         with open(f"{papers}/{nombre_archivo}", "r", encoding="utf-8") as archivo:
             text = archivo.read()
@@ -21,4 +21,4 @@ with open("../resultados/enlaces.txt", "w", encoding="utf-8") as out:
 
         out.write("\n")
 
-print("Enlaces guardados en '../resultados/enlaces.txt'")
+print("Enlaces guardados en 'enlaces.txt'")
