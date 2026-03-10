@@ -2,7 +2,7 @@ from wordcloud import WordCloud
 import os
 import re
 
-papers = "practica-individual-os-ai-rse/papers"
+papers = "../papers"
 
 xmls = [f for f in os.listdir(papers) if f.endswith(".xml")]
 
@@ -35,7 +35,7 @@ for nombre_archivo in xmls:
     nube = WordCloud(width=800, height=400, background_color="white")
     nube.generate_from_frequencies(frecuencia)
 
-    nube.to_file(f"practica-individual-os-ai-rse/resultados/nube_{nombre_archivo.replace('.xml', '.png')}")
+    nube.to_file(f"../resultados/nube_{nombre_archivo.replace('.xml', '.png')}")
 
     print(f"Nube generada: nube_{nombre_archivo.replace('.xml', '.png')}")
     
