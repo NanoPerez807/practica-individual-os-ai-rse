@@ -132,7 +132,7 @@ El número de figuras se verificó buscando manualmente la etiqueta `<figure>` d
 
 ## Enlaces
 
-Los enlaces extraídos se compararon con los enlaces presentes en el texto y en los atributos del XML. Y, debido a que se habían ciertos enlaces que no eran del propio PDF, sino que se generaban automaticamente con la creación del XML en Grobid, se estableció una condición para no tenerlos en cuenta. Concretamente se han descartado: "https://github.com/kermitt2/grobid", "https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd", "http://www.tei-c.org/ns/1.0", "http://www.w3.org/2001/XMLSchema-instance", "http://www.w3.org/1999/xlink".21q
+Los enlaces extraídos se compararon con los enlaces presentes en el texto y en los atributos del XML. Y, debido a que habían ciertos enlaces que no eran del propio PDF, sino que se generaban con la creación del XML en Grobid, se estableció una condición para no tenerlos en cuenta. Concretamente se han descartado: "https://github.com/kermitt2/grobid", "https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd", "http://www.tei-c.org/ns/1.0", "http://www.w3.org/2001/XMLSchema-instance", "http://www.w3.org/1999/xlink".
 
 ---
 
