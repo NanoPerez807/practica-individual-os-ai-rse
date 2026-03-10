@@ -16,7 +16,7 @@ with open("../resultados/enlaces.txt", "w", encoding="utf-8") as out:
         enlaces = set(re.findall(r'https?://[^\s<>"\]]+', text))
 
         for link in enlaces:
-            if link != "https://github.com/kermitt2/grobid":
+            if link != "https://github.com/kermitt2/grobid" and link != "http://www.tei-c.org/ns/1.0" and link != "http://www.w3.org/2001/XMLSchema-instance" and link != "http://www.w3.org/1999/xlink":
                 out.write(link + "\n")
 
         out.write("\n")
