@@ -211,7 +211,7 @@ The documentation is hosted on ReadTheDocs and can be accessed at:
 
 * codemeta.json contains project metadata.
 
-* CITATION.cff provides the preferred citation¡.
+* CITATION.cff provides the preferred citation.
 
 * The published release is archived on Zenodo.
 
