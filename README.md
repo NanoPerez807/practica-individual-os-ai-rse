@@ -79,6 +79,12 @@ resultados/enlaces.txt
 
 # Installation and execution
 
+Download the repository with
+
+```
+git clone https://github.com/NanoPerez807/practica-individual-os-ai-rse
+```
+
 The project can be run in two ways: using Poetry (local environment) or using Docker (containerized environment). Both options are explained below.
 
 ## Option 1: Using Poetry (local environment)
