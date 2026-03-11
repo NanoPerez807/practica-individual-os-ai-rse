@@ -1,0 +1,7 @@
+site_name: Open Science and AI Analysis
+
+nav:
+  - Home: index.md
+
+theme:
+  name: readthedocs
