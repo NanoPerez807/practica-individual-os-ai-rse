@@ -3,6 +3,7 @@ version: "3"
 services:
   analysis:
     build: .
+    working_dir: /practica-individual-os-ai-rse
     volumes:
       - .:/practica-individual-os-ai-rse
-    command: bash run.sh docker
+    command: bash -c "cd scripts && python figures.py && python keywords.py && python links.py"
