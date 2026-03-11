@@ -145,7 +145,7 @@ cd ..
 ### 6. To exit the Poetry virtual environment when finished:
 
 ```
-exit
+deactivate
 ```
 
 ---
