@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: Open Science and AI Paper Analysis
+message: If you use this software, please cite it as follows.
+authors:
+  - family-names: Pérez Alonso-Castrillo
+    given-names: Fernando
+license: MIT
+version: 1.0
+doi: 10.0000/zenodo.xxxxx

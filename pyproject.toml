@@ -1,18 +1,17 @@
-[project]
+[tool.poetry]
 name = "practica-individual-os-ai-rse"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Fernando Pérez"}
-]
-license = {text = "MIT"}
+authors = ["Fernando Pérez"]
+license = "MIT"
 readme = "README.md"
-requires-python = ">=3.9"
-dependencies = [
-    "rdflib (>=7.6.0,<8.0.0)"
-]
-package = false
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+matplotlib = "^3.10.8"
+wordcloud = "^1.9.6"
+
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
